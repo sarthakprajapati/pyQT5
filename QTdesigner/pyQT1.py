@@ -57,6 +57,14 @@ class Ui_MainWindow(object):
         self.button2.clicked.connect(self.lineEdit_2.clear)
         self.button2.clicked.connect(self.lineEdit.clear)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.Button1.clicked.connect(self.chkPassword)
+
+    def chkPassword(self):
+        txt=self.lineEdit.text()
+        if txt=='Internshala':
+            print ('Valid password')
+        else:
+            print ('Invalid password')
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
